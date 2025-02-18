@@ -8,7 +8,7 @@ public class Oficina {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_oficina")
-    private Long id;
+    private int id;
 
     @Column(name = "codigo_oficina")
     private String codOficina;
@@ -31,11 +31,11 @@ public class Oficina {
     public Oficina() {
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -28,9 +28,6 @@ public class Empleado {
     @Column(name = "extension")
     private String extension;
 
-    public Empleado() {
-    }
-
     // FK
     @ManyToOne // Un empleado puede pertenecer a una oficina (1 a 1) y una oficina puede tener muchos empleados (1 a muchos)
     @JoinColumn(name = "id_oficina")
@@ -39,6 +36,9 @@ public class Empleado {
     @ManyToOne // Un empleado puede tener un jefe (1 a 1) y un jefe puede tener muchos empleados (1 a muchos)
     @JoinColumn(name = "id_jefe")
     private Empleado idJefe;
+
+    public Empleado() {
+    }
 
     public Long getId() {
         return id;
